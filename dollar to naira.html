@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dollar to Naira Converter</title>
+</head>
+<body>
+    <h2>Dollar to Naira Converter</h2>
+    <input type="number" id="dollar" placeholder="Enter amount in dollars">
+    <select id="converter" onchange="convertCurrency()">
+        <option value="">Select Conversion</option>
+        <option value="naira">Dollar to Naira</option>
+    </select>
+    <p id="result"></p>
+
+    <script>
+        function convertCurrency() {
+            let dollar = document.getElementById("dollar").value;
+            let result = dollar * 750; // Example conversion rate
+            document.getElementById("result").innerText = dollar ? `${dollar} USD = ${result} NGN` : "";
+        }
+    </script>
+</body>
+</html>

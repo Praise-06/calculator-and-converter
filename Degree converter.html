@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Degree Converter</title>
+</head>
+<body>
+    <h2>Degree Converter</h2>
+    <select id="conversionType">
+        <option value="CtoF">Celsius to Fahrenheit</option>
+        <option value="FtoC">Fahrenheit to Celsius</option>
+    </select>
+    <input type="number" id="inputValue" placeholder="Enter value">
+    <button onclick="convert()">Convert</button>
+    <p id="result"></p>
+
+    <script>
+        function convert() {
+            const type = document.getElementById('conversionType').value;
+            const value = parseFloat(document.getElementById('inputValue').value);
+            let result = 0;
+
+            if (type === "CtoF") {
+                result = (value * 9/5) + 32;
+            } else {
+                result = (value - 32) * 5/9;
+            }
+
+            document.getElementById('result').innerText = "Result: " + result.toFixed(2);
+        }
+    </script>
+</body>
+</html>

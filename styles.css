@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: darkblue;
+  color: white;
+  padding: 10px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+social-icons {
+  margin-right: 10px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-info p {
+  margin: 0;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.phone-icon::before,
+.email-icon::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  margin-right: 5px;
+}
+
+.phone-icon::before {
+  background-image: url('phone.png');
+}
+
+.email-icon::before {
+  background-image: url('mail.png');
+}
+
+.header-right input[type="text"] {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+nav {
+  background-color: #444;
+}
+
+.nav h4 {
+  font-size: 40px;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: end;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+.hero {
+  position: relative;
+  background: url('WhatsApp Image 2024-05-22 at 00.01.14_4484cff8.jpg') no-repeat center center/cover;
+  background-size: 100% 100%;
+  background-position: center;
+  height: 400px;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.hero .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  align-items: baseline;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero .buttons .btn {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.hero .buttons .btn-1 {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.hero .buttons .btn:hover {
+  background-color: white;
+}
+
+.hero .buttons .btn-1:hover {
+  background-color: black;
+}
+
+.products {
+  padding: 50px 0;
+  text-align: center;
+  background-color: darkblue;
+}
+
+.products h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: whit;
+}
+
+.products h3 {
+  font-size: 1.5em;
+  color: white;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  justify-items: baseline;
+}
+
+.search-bar input[type="text"] {
+  width: 300px;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}

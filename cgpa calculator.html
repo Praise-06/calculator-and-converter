@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CGPA Calculator</title>
+</head>
+<body>
+    <label for="grades">Select Grades:</label>
+    <select id="grades" multiple>
+        <option value="4">A</option>
+        <option value="3.5">B+</option>
+        <option value="3">B</option>
+        <option value="2.5">C+</option>
+        <option value="2">C</option>
+        <option value="1.5">D+</option>
+        <option value="1">D</option>
+        <option value="0">F</option>
+    </select>
+    <button onclick="calculateCGPA()">Calculate CGPA</button>
+    <p id="result"></p>
+
+    <script>
+        function calculateCGPA() {
+            let grades = document.getElementById("grades");
+            let selectedGrades = Array.from(grades.selectedOptions).map(opt => parseFloat(opt.value));
+            let cgpa = selectedGrades.reduce((a, b) => a + b, 0) / selectedGrades.length;
+            document.getElementById("result").textContent = "CGPA: " + (selectedGrades.length ? cgpa.toFixed(2) : "0.00");
+        }
+    </script>
+</body>
+</html>
